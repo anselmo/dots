@@ -1,0 +1,32 @@
+#console
+alias ls='ls -lah -G'
+alias la='ls -la'
+
+#editors
+alias v='mvim'
+alias m='mate'
+
+#utils
+alias %=' '
+alias pbc='pwd | pbcopy'
+alias tailler='tail -f log/development.log'
+
+#changing directory to code project
+function c { cd ~/workspace/$1; }
+
+#grep
+alias pygrep="grep --include='*.py' $*"
+alias rbgrep="grep --include='*.rb' $*"
+
+# git
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff | mate'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gch='git checkout'
+alias gsb='git show-branch'
+alias gx='gitx --all'

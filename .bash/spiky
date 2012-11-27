@@ -1,0 +1,52 @@
+#!/bin/bash
+#https://gist.github.com/1218637
+spiky(){
+  echo "Target Directory: "
+  read SITE_NAME
+  echo "Creating $SITE_NAME... Wat!"
+  mkdir -p $SITE_NAME
+  cp -r ~/code/_template-r0001/* $SITE_NAME
+  cd $SITE_NAME
+    
+  rvm list  
+  echo "Ruby Version:"
+  read ruby_version
+  echo "Gemset:"
+  read gemset
+  echo "rvm --create" $ruby_version"@"$gemset > .rvmrc
+
+  # cd public/js/vendor
+  # echo "Ender modules to build? (ex: jeesh bean domReady underscore qwery etc...)"
+  # read ender_modules
+  # ender build $ender_modules
+# 
+#   cd ../../../
+  git init
+  git add .
+  git commit -m 'init app'
+# 
+  echo "Opening !!"
+  m .
+}
+
+spa(){
+  options1="option1 option2 quit"
+
+  echo options1 $options1
+
+  select opt in $options1 ; do
+  echo $opt
+  # if [ "$opt"="quit" ]; then
+  #         exi
+  # fi
+  done
+}
+
+ver(){
+  cd ~
+  rvm list |
+  while read name
+  do
+   echo $name
+  done
+}
