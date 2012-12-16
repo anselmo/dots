@@ -1,2 +1,2 @@
 PS1="\[\033[0;31m\]$(date +%H:%M): \w\[\033[0;34m\]\$(grb_git_prompt) \[\033[0;32m\]$ "
-
+export ANT_OPTS=-Xmx1g

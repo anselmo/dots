@@ -1,4 +1,3 @@
-source ~/.bash/exports
 source ~/.bash/bin/git-completion.bash
 source ~/.bash/git
 source ~/.bash/extra

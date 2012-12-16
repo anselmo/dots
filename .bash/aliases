@@ -19,6 +19,7 @@ alias pygrep="grep --include='*.py' $*"
 alias rbgrep="grep --include='*.rb' $*"
 
 # git
+alias g='git'
 alias gst='git status'
 alias gl='git pull'
 alias gp='git push'
@@ -30,3 +31,69 @@ alias gba='git branch -a'
 alias gch='git checkout'
 alias gsb='git show-branch'
 alias gx='gitx --all'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gau="git add --update"
+alias gbr="git remote prune origin && git branch -r"
+
+# rails
+# alias sc='script/console'
+# alias ss='script/server'
+# alias sg='script/generate'
+# alias a='autotest -rails'
+# alias tlog='tail -f log/development.log'
+# alias scaffold='script/generate nifty_scaffold'
+# alias migrate='rake db:migrate db:test:clone'
+# alias rst='touch tmp/restart.txt'
+# 
+# rails 3
+alias rc='rails c'
+alias rs='rails s -p 3001'
+alias be='bundle exec'
+alias tf="ruby_test functional"
+alias tu="ruby_test unit"
+alias sc="ruby_spec controllers"
+alias sm="ruby_spec models"
+alias bes="bundle exec rspec"
+alias ber="bundle exec rake"
+alias bake="bundle exec rake"
+alias be="bundle exec"
+
+#postgres
+alias psqld_start='pg_ctl -D /usr/local/var/postgres -l logfile start'
+alias psqld_stop='pg_ctl -D /usr/local/var/postgres stop'
+
+# server
+alias reload='. ~/.bash_profile'
+alias restart_rails='touch tmp/restart.txt'
+alias apache_logs='cd /private/var/log/apache2/'
+alias vhosts='sudo mvim  /private/etc/apache2/other/sites.conf'
+alias hosts='sudo mvim /etc/hosts'
+alias apache_restart='sudo apachectl restart'
+alias apache_stop='sudo apachectl -k stop'
+alias apache_conf='/private/etc/apache2'
+alias railsmate='ls -1 | egrep -vi "(log|tmp|cache|.git)" | xargs mate'
+
+# nginx
+alias nr='sudo kill -HUP `cat /var/run/nginx.pid`'
+alias ne='sudo mvim /usr/local/conf/nginx.conf'
+
+# global tomcat instace
+alias start_tom='/Library/Tomcat/Home/bin/catalina.sh start'
+alias stop_tom='/Library/Tomcat/Home/bin/catalina.sh stop'
+
+
+alias awa='ant assembled-webapp'
+
+# copy proprieties for development
+alias cprop='cp ~/development/lp/online/shop/src/main/local-resources/*.properties ~/development/lp/online/shop/target/webapp/WEB-INF/classes/' 
+
+# coffeescript
+function join-and-compile-tt-coffee(){
+  echo 'Join and Complie Coffee'
+  coffee --join ~/development/lp/online/roundup/thorntree/src/main/webapp/js/lib/ttmob.js --compile ~/development/lp/online/roundup/thorntree/src/main/webapp/js/coffee/*
+  cp ~/development/lp/online/roundup/thorntree/src/main/webapp/js/lib/ttmob.js ~/development/lp/online/roundup/thorntree/target/webapp/js/lib/
+}
+alias tt-coffee='join-and-compile-tt-coffee'
+
+alias glog="git log --format='%Cgreen%h%Creset %C(cyan)%an%Creset - %s' --graph"
+

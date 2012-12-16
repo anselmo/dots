@@ -9,5 +9,3 @@ export GIT_EDITOR='vim'
 export JAVA_HOME=/Library/Java/Home
 export CATALINA_HOME=/Library/Tomcat/Home
 
-# RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
