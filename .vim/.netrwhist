@@ -1,7 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/dasilaw6/development/lp/muppets/rizzo'
-let g:netrw_dirhist_2='/Users/dasilaw6/development/lp/muppets'
-let g:netrw_dirhist_3='/Users/dasilaw6/development/lp/lponline/destinations'
-let g:netrw_dirhist_4='/Users/dasilaw6/.bash'
-let g:netrw_dirhist_5='/Users/dasilaw6/development/void/cssl/op'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/dasilaw6/development/lp/online/microsites'
